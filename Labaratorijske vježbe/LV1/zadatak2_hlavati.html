@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <nav>
+        <a href="index.html">NAZAD</a>
+        <header>
+            <h1 align="right">OBRAZAC</h1>
+        </header>
+    </nav>
+
+    <form>
+        Korisnicko ime:<br>
+        <input type="text" name="korisnicko_ime" maxlength="15" placeholder="Korisničko ime">
+        <br> Lozinka: <br>
+        <input type="password" name="password" maxlength="15" placeholder="Lozinka"><br>
+        <br><select>
+            <option value="odlican">Odličan (5)</option>
+            <option value="vrlo_dobar">Vrlo dobar (4)</option>
+            <option value="dobar">Dobar (3)</option>
+            <option value="dovoljan">Dovoljan (2)</option>
+            <option value="nedovoljan">Nedovoljan (1)</option>
+        </select><br>
+        <br><textarea name="komentar" id="komentar" maxlength="40" rows="7"></textarea><br>
+        <input type="radio" name="usmena_ocjena" value="komunikativan"> Komunikativan<br>
+        <input type="radio" name="usmena_ocjena" value="samostalan"> Samostalan<br>
+        <input type="radio" name="usmena_ocjena" value="radisan"> Radišan<br>
+        <input type="radio" name="usmena_ocjena" value="nista_od_navedenog" checked> Ništa od navedenog <br>
+        <br><button>Pošalji</button>
+    </form>
+</body>
+
+</html>
