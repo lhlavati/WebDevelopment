@@ -1,0 +1,27 @@
+.PrviOdlomak {
+    text-align: center;
+    color: red;
+    font-size: 110%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#odlomak2 {
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    text-align: left;
+    font-style: italic;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+h1{
+    color: red;
+}
+
+#druga {
+    color: gray;
+}
+#druga:hover {
+    color: black;
+}
