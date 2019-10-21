@@ -1,0 +1,27 @@
+.img-circle {
+    width: 100px;
+    height: 100px;
+}
+.bg-dark{
+    background-color: #343a40!important;
+}
+.navbar-color {
+    color: whitesmoke;
+}
+.slike {
+    width: 250px;
+    height: 250px;
+}
+.ul {
+    list-style: none;
+}
+.naslov{
+    align-items: center;
+}
+.line{
+    margin: 0 14rem;
+}
+
+.col-sm-4 {
+    padding: 0;
+}
