@@ -23,10 +23,60 @@
 }
 
 .col-sm-4 {
-    padding: 0;
+    text-align: right;
 }
 
-p:first-child{
+.col-sm-8 {
+    align-items: left;
+}
+
+p:first-of-type{
     size: 130px;
     color: cadetblue;
+}
+th {
+    text-align: center;
+    background-color: #101010;
+    color: white
+}
+
+.table-striped{
+    background-color: lightslategrey;
+}
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .container:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+p:last-of-type{
+    text-align: center;
 }
