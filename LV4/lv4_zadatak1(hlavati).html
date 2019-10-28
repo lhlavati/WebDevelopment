@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LV4_ZAD1</title>
+	</head>
+
+	<body>
+		<button ondblclick="pozdrav()">Pozdrav</button><br><br>
+		<textarea cols="50" rows="10" id="hlavati"></textarea><br>
+		<button onclick="textArea()">Osobni podaci</button>
+		<button onmouseenter="clearTextArea()">Očisti</button>
+		<button onclick="kolegij()">Ispis kolegija</button>
+
+
+		<script type="text/javascript">
+			function pozdrav(){
+				for (i = 0; i < 5; i++){
+					var text = "Remaining alerts = " + (4-i).toString() + "\nLuka Hlavati";
+					alert(text);
+				}
+			}
+			function textArea(){
+				document.getElementById("hlavati").innerHTML = "Luka Hlavati\nOsijek/Našice\n3. godina\nInformatika";
+			}
+			function clearTextArea(){
+				document.getElementById("hlavati").innerHTML = "";
+			}
+			function kolegij(){
+				document.getElementById("hlavati").innerHTML = ""
+				var kolegiji = new Array(8);
+					kolegiji[0] = "Programiranje u Javi"
+					kolegiji[1] = "Fizika"
+					kolegiji[2] = "Matematika II"
+					kolegiji[3] = "Elektronika"
+					kolegiji[4] = "Informacijski sustavi"
+					kolegiji[5] = "Inženjerska grafika"
+					kolegiji[6] = "Programiranje II"
+					kolegiji[7] = "Njemački"
+				for(var broj_kolegija in kolegiji){
+					document.getElementById("hlavati").innerHTML+=("Kolegij " + broj_kolegija.toString());
+					document.getElementById("hlavati").innerHTML+=(": "+ kolegiji[broj_kolegija] + "\n")
+				}
+			}
+		</script>
+	</body>
+</html>
