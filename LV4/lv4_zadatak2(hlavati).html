@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LV4_ZAD2</title>
+	<script src="lv4.js"></script>
+</head>
+<body>
+	<h1>Objekti</h1>
+	<script type="text/javascript">
+		function pas(ime, pasmina, starost){
+			this.ime=ime;
+			this.pasmina=pasmina;
+			this.starost=starost;
+		}
+
+		function macka(ime, boja, dob, spol){
+			this.ime=ime;
+			this.boja=boja;
+			this.dob=dob;
+			this.spol=spol
+		}
+
+		var bijeli=new pas("jura","dalmatiner","8");
+		var garavi=new pas("garo", "mješanac","nepoznato");
+		var crni = new pas("crni", "mješanac", "6");
+		var bijela = new pas("bela", "mješanac", "3");
+		
+		var garfi=new macka("garfi", "crna", "4", "muško");
+		var smoki=new macka("smoki", "smeđa", "3", "muško")
+
+		var kerovi = [bijeli, garavi, crni, bijela];
+		var macke = [garfi, smoki];
+
+		for (var i = kerovi.length - 1; i >= 0; i--) {
+			document.write(
+			"Ime " + (kerovi.length - i).toString() + ". psa je: " + kerovi[i].ime
+			+ ", pasmina: " + kerovi[i].pasmina 
+			+ " i starost: " + kerovi[i].starost + "<br>") 	
+		}
+
+		for (var i = macke.length - 1; i >= 0; i--) {
+			document.write(
+			"Ime " + (macke.length - i).toString() + ". mačke je: " + macke[i].ime
+			+ ", boja: " + macke[i].boja
+			+ ", dob: " + macke[i].dob 
+			+ " i spol: " + macke[i].spol + "<br>") 	
+		}
+
+		zadatak();
+	</script>
+</body>
+</html>
