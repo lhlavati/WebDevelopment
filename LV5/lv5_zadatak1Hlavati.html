@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Validacija</title>
+</head>
+
+<body>
+    <div class="forma">
+        <h1>Validacija</h1>
+        <form name="forma_hlavati" action="">
+            <p>Ime i prezime:
+                <input type="text" name="imeprezime">
+            </p>
+            <p>Broj:
+                <input type="text" name="broj">
+                <i title="Broj mora biti izmedu 1-10" class="fa fa-question"></i>
+                <button onclick="return funckija2()">Kvadriraj</button>
+            </p>
+            <p id="rezultat">Ovdje ce se ispisat rezultat</p>
+            <p>Email adresa:
+                <input type="email" name="email2" placeholder="example@gmail.com">
+            </p>
+            <p>
+                <button id="provjeri">Provjeri !</button>
+            </p>
+        </form>
+    </div>
+
+    <p id="paragraph1"></p>
+    <script src="lv5_zadatak2Hlavati.js"></script>
+</body>
+
+</html>

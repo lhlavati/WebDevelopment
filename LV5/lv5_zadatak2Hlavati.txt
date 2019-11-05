@@ -1,0 +1,59 @@
+document.getElementById("provjeri").onclick = function () { funckija1() };
+
+function emailIsValid(email) {
+    return /\S\S+@+\S\S+\.\S\S+/.test(email)
+}
+
+function funckija1() {
+    var name = document.forms["forma_hlavati"]["imeprezime"];
+    var email = document.forms["forma_hlavati"]["email2"].value;
+    if (name.value == "") {
+        alert("polje 'Ime i prezime' ne smije bit prazno");
+    }
+
+    else if (emailIsValid(email) == false) {
+        //alert("Adresa je pogresna\n adresa treba biti u formatu aa@aa.aa mora imati po 2 znaka iza i ispred @ i .");
+        if (email.includes('@') == false) {
+            alert('Nema @');
+        }
+        if (email.includes('.') == false) {
+            alert('Nema tocke');
+        }
+        if (email.includes('.') == true && email.includes('@') == true) {
+            if (/\S\S+@+\S+/.test(email) == false) {
+                alert("2 ili vise znaka prije @");
+            }
+            if (/\S+@+\S\S+\.+/.test(email) == false) {
+                alert("2 ili vise znaka poslije @");
+            }
+            if (/\S+@+\S+\.+\S\S+/.test(email) == false) {
+                alert("2 ili vise znaka poslije tocke");
+            }
+        }
+
+    }
+
+    else if (emailIsValid(email) == true) {
+        confirm("Vaše ime je: " + name.value.split(' ').slice(0, -1).join(' ') + "\nVaše prezime je: " + name.value.split(' ').slice(-1).join(' ') + "\nVaša email adresa je: " + email)
+    }
+
+}
+
+function funckija2() {
+    var broj = document.forms["forma_hlavati"]["broj"];
+    if (broj.value > 0 && broj.value < 11) {
+        document.getElementById("rezultat").innerHTML = (broj.value * broj.value)
+        return false;
+    }
+    else {
+        alert("Broj mora biti između 1 i 10!");
+        document.getElementById("rezultat").innerHTML = "Pogreska";
+        return false;
+    }
+}
+
+var ja = { ime: "Luka", prezime: "Hlavati", dob: 21 };
+var jaJSON = JSON.stringify(ja);
+var ja2 = JSON.parse(jaJSON);
+document.getElementById("paragraph1").innerHTML += "Moj JSON objekt: " + jaJSON;
+document.getElementById("paragraph1").innerHTML += "<br>Moja dob je: " + ja2.dob;
